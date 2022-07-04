@@ -102,7 +102,8 @@ function App() {
   return (
     <div className="container">
     <div className="calculator">
-      <div data-testid="running-total" id="running-total" className="display">{ runningTotal }</div>
+      
+      <div data-testid="running-total" id="running-total" className="display">{ isFinite(runningTotal) ? runningTotal : 'Error!' }</div>
       <KeyPad 
       handleNumber={numberClick} 
       handleOperator={operatorClick} 
